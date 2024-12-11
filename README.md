@@ -35,7 +35,7 @@ Before starting the installation, make sure the following components are install
 ## Step-by-Step Installation Guide
 
 ### 1. Create and Set Up a Virtual Machine
-- Follow this guide on how to create a virtual machine on **Microsoft Azure**: [Creating Virtual Machines](https://github.com/chrisrraP/configure-ad).
+- Follow this guide on how to create a virtual machine on **Microsoft Azure**: [Creating Virtual Machines](https://github.com/MarioDeberry/Configuring-Active-Directory-within-Azure-VMs).
 - Install **Windows 10** and connect using **Remote Desktop**.
 
 ### 2. Install IIS and Dependencies
