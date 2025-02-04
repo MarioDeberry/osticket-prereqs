@@ -37,11 +37,12 @@ Before starting the installation, make sure the following components are install
 
 ### 1. Create a Virtual Machine in Azure
 1. Open **Azure** and create a **Resource Group**.
-   <p align="center">
+   - You can name it "osTicket" for this tutorial.
+    <p align="center">
      <img src="https://i.imgur.com/lp8bbY2.png" width="80%">
    </p>
 
-2. Create a **Windows 10 Virtual Machine (VM)** with 2-4 vCPUs.
+3. Create a **Windows 10 Virtual Machine (VM)** with 2-4 vCPUs.
    - Set a username and password for remote login.
    - Allow Azure to create a new Virtual Network (Vnet).
 
@@ -49,7 +50,8 @@ Before starting the installation, make sure the following components are install
      <img src="https://imgur.com/7BZDj3r.png" width="80%">
    </p>
 
-3. Use the **Remote Desktop Connection** app on your computer to connect to the VM.
+4. Use the **Remote Desktop Connection** app on your computer to connect to the VM.
+   - Use the public IP address of the virtual machine created within Azure.
    <p align="center">
      <img src="https://github.com/Joeljjoseph1998/osticket-prereqs/assets/50834280/2e71fd86-4198-47aa-aa1a-d0aed1b8e0eb" alt="RDP Connection" width="80%">
    </p>
@@ -99,7 +101,8 @@ Before starting the installation, make sure the following components are install
 ---
 ### 6. Install MySQL
 1. Download and install **MySQL**.
-2. Set a username and password (e.g., `root` and `Password1`) for database management.
+2. Select "Standard Configuration" 
+3. Set a username and password (e.g., `root` and `root`) for database management.
 <p align="center">
      <img src="https://imgur.com/W0CovQJ.png" width="80%">
 
@@ -144,30 +147,15 @@ Before starting the installation, make sure the following components are install
 
 ---
 ### 9. Configure osTicket
-1. Rename `ost-sampleconfig.php` to `ost-config.php` in the `include` directory.
-2. Assign appropriate permissions to the `ost-config.php` file.
-
-3. Continue setup in your browser:
-   - Set up database details (MySQL).
-   - Name your helpdesk and provide a default email.
+1. Rename `C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php` to `ost-config.php` in the `include` directory.
+2. Assign permissions to the `ost-config.php` file.
+3. Disable inheritance - Remove All
+4. New Permissions - Everyone All
 
 <p align="center">
      <img src="https://imgur.com/6JOTO5k.png" width="80%">
 
-   <p align="center">
-     <img src="https://imgur.com/6L5vxjG.png" width="80%">
-   </p>
-
-4. Click **Install Now!**
-
----
-
-### 10. Final Steps
-1. Delete the `setup` directory from `C:\inetpub\wwwroot\osTicket`.
-   - Right click `ost-config.php` file and click properties.
-   - Disable inheritance -> Remove all.
-   - Add everyone to permission entries then click apply:
-   <p align="center">
+ <p align="center">
      <img src="https://imgur.com/xWAm2yE.png" alt="Cleanup" width="80%">
    </p>
    <p align="center">
@@ -175,7 +163,20 @@ Before starting the installation, make sure the following components are install
    </p>
    <p align="center">
      <img src="https://imgur.com/U5g0234.png" alt="Cleanup" width="80%">
+     
+
+### 10. Final Steps
+ Continue setup in your osTicket browser:
+   - Set up database details (MySQL).
+   - Open Heidi SQL and Create a new database called "osTicket", name the username and password root/root
+   - Click **Install Now!**
+   - Name your helpdesk and provide a default email.
+   
+
+   <p align="center">
+     <img src="https://imgur.com/6L5vxjG.png" width="80%">
    </p>
+
 
 ---
 
